@@ -1,23 +1,58 @@
 aid: courtlistener
 name: CourtListener
-description: 'CourtListener is a company surfaced via the API Evangelist harvest backlog (source: legal)
-  and added to the network as a stub for full-pipeline profiling.'
+image: https://storage.courtlistener.com/static/png/og-image-1200x630.7f25387a570b.png
+description: Free Law Project is a nonprofit organization that provides free access to legal information and tools. It operates CourtListener,
+  a comprehensive searchable database of United States court opinions, oral arguments, and other legal documents, along with related services
+  such as RECAP and Bots.law. The platform aims to make the legal ecosystem more equitable and competitive by leveraging technology and open data.
 url: https://raw.githubusercontent.com/api-evangelist/courtlistener/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:legal
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-21 (modular-v1; was harvest)
 specificationVersion: '0.20'
 created: '2026-09-21'
 modified: '2026-09-21'
 tags:
-- Company
-apis: []
+- Legal
+- Nonprofit
+- OpenData
+- CourtListener
+- FreeLaw
+apis:
+- name: CourtListener API
+  description: API for CourtListener legal data access
+  humanURL: https://www.courtlistener.com/
+  baseURL: null
+  aid: courtlistener:courtlistener-api
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Documentation pages return HTML shells and no machine‑readable OpenAPI spec is available.
+  evidence:
+  - url: https://api.courtlistener.com/openapi.json
+    status: 0
+  - url: https://www.courtlistener.com/openapi.json
+    status: 403
+  checked: 2026-09-21
 common:
+- type: WellKnown
+  url: well-known/courtlistener-well-known.yml
+- type: Support
+  url: https://www.courtlistener.com/help/
+- type: Login
+  url: https://www.courtlistener.com/sign-in/?next=/?
+- type: DomainSecurity
+  url: security/courtlistener-domain-security.yml
 - type: Website
   url: https://www.courtlistener.com/
+x-enrichment:
+  date: '2026-09-21'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
