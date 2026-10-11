@@ -1,0 +1,11 @@
+[
+  {
+    "repo": "courtlistener",
+    "captured_at": "2026-10-11T184057",
+    "source_url": "https://www.courtlistener.com/",
+    "source_type": "Website",
+    "file": "courtlistener-2026-10-11T184057.png",
+    "bytes": 79396,
+    "capture": "playwright-local"
+  }
+]
